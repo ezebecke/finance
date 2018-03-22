@@ -33,7 +33,8 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # configure CS50 Library to use SQLite database
-db = SQL("sqlite:///finance.db")
+#db = SQL("sqlite:///finance.db")
+db = SQL("postgres://bgpaphycyrjlid:7a88d94c94f9413c65eb77c227716ee66f48789f0d60e038493ba215a29c5ca4@ec2-54-83-58-222.compute-1.amazonaws.com:5432/daqaposu16bo6g")
 
 #in order to acces to the route the user must be logeg in. that's why we use @login_required
 @app.route("/")
